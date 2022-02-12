@@ -22,7 +22,8 @@ npm install -D date-picker-svelte
 
 ## DateInput
 
-Component with an input field that shows the DatePicker component on focus.
+Component with an input field that shows the DatePicker component on focus. 
+The component will not assign a date value until a specific date is selected in the picker or entered into the field.
 
 ### Props
 
@@ -31,7 +32,6 @@ Component with an input field that shows the DatePicker component on focus.
 | `value`               | Date   | Date value                                                                  |
 | `min`                 | Date   | The earliest value the user can select                                      |
 | `max`                 | Date   | The latest value the user can select                                        |
-| `defaultDate`         | Date   | Default date to use before value is assigned (defaults to the current date) |
 | `placeholder`         | string | Placeholder used when date value is null                                    |
 | `valid`               | bool   | Whether the text is valid                                                   |
 | `format`              | string | Format string                                                               |
@@ -55,13 +55,13 @@ Example format string: `yyyy-MM-dd HH:mm:ss`
 ## DatePicker
 
 Component with a calendar for choosing a date.
+The component will not assign a date value until a specific date is selected in the picker.
 
 ### Props
 
 | Prop                 | Type   | Description                            |
 |:---------------------| :----- | :------------------------------------- |
 | `value`              | Date   | Date value                             |
-| `defaultDate`        | Date   | Default date to use before value is assigned (defaults to the current date)  |
 | `min`                | Date   | The earliest year the user can select  |
 | `max`                | Date   | The latest year the user can select    |
 | `locale`             | Locale | Locale object for internationalization |
