@@ -12,7 +12,7 @@
   const dispatch = createEventDispatcher<{ select: undefined }>()
 
   /** Default date to use before value is assigned */
-  const defaultDate = new Date();
+  export let defaultDate = new Date();
 
   // inner date value store for preventing value updates (and also
   // text updates as a result) when date is unchanged
@@ -149,6 +149,7 @@
       <DateTimePicker
         on:focusout={onFocusOut}
         on:select={onSelect}
+        bind:defaultDate
         bind:value={$store}
         {min}
         {max}
