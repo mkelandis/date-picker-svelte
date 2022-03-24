@@ -3,3 +3,5 @@
 /package
 /coverage
 /node_modules
+/.idea
+/.run
